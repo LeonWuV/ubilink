@@ -5,33 +5,33 @@ $(function(){
 	//下划线跟着鼠标跑
 	$(".content-top2>p").on("mouseover",function(){
 		$(".content-span").stop().animate({
-			"left":$(this).index()*100
+			"left":$(this).index()*140
 		});							
 	});
 	$(".content-top3>p").on("mouseover",function(){
 		$(".content-span").stop().animate({
-			"left":$(this).index()*100
+			"left":$(this).index()*140
 		});							
 	});
 	$(".content-top4>p").on("mouseover",function(){
 		$(".content-span").stop().animate({
-			"left":$(this).index()*100
+			"left":$(this).index()*140
 		});							
 	});
 	
 	//鼠标离开复原
 	$(".content-top2>p").on("mouseout",function(){
 	    	$(".content-span").stop().animate({
-	    		"left":n*100
+	    		"left":n*140
     		});
 	});
 	$(".content-top3>p").on("mouseout",function(){
 	    	$(".content-span").stop().animate({
-	    		"left":n*100
+	    		"left":n*140
     		});
 	});$(".content-top4>p").on("mouseout",function(){
 	    	$(".content-span").stop().animate({
-	    		"left":n*100
+	    		"left":n*140
     		});
 	});
 	
@@ -77,7 +77,7 @@ $(function(){
 		//n归0
 		n = 0;
 		$(".content-span").stop().animate({
-	    		"left":n*100
+	    		"left":n*140
     		});
     	//第一个默认显示，其余隐藏
 		$(".content-main2>div").hide();
@@ -111,7 +111,7 @@ $(function(){
 		$(".content-main3>div").eq($(this).index()).show();
 		$(".content-main4>div").eq($(this).index()).show();
 		//下划线变换
-		$(".content-span").css({"left":n*100});
+		$(".content-span").css({"left":n*140});
 		//变颜色
 		$(".content-top2>p").css({"color":"#333333"});
 		$(".content-top2>p").eq(n).css({"color":"#19b1e8"});
@@ -127,7 +127,7 @@ $(function(){
 			$(".content-main3>div").eq($(this).index()).show();
 			$(".content-main4>div").eq($(this).index()).show();
 			//下划线变换
-			$(".content-span").css({"left":n*100});
+			$(".content-span").css({"left":n*140});
 			//变颜色
 			$(".content-top3>p").css({"color":"#333333"});
 			$(".content-top3>p").eq(n).css({"color":"#19b1e8"});
@@ -143,7 +143,7 @@ $(function(){
 			$(".content-main3>div").eq($(this).index()).show();
 			$(".content-main4>div").eq($(this).index()).show();
 			//下划线变换
-			$(".content-span").css({"left":n*100});
+			$(".content-span").css({"left":n*140});
 			//变颜色
 			$(".content-top4>p").css({"color":"#333333"});
 			$(".content-top4>p").eq(n).css({"color":"#19b1e8"});

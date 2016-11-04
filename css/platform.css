@@ -106,7 +106,7 @@ h1 a{
 }
 .content-top2>p,.content-top3>p,.content-top4>p{
 	float: left;
-	width: 100px;
+	width: 140px;
 	height: 44px;
 	text-align: center;
 	font-size: 22px;
@@ -115,7 +115,7 @@ h1 a{
 } 
 .content-span{
 	height: 2px;
-	width: 100px;
+	width: 140px;
 	display: block;
 	background:#19b1e8 ;
 	position: absolute;

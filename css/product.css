@@ -19,6 +19,11 @@ h1{
 	background: url(../img/logo.png) no-repeat 0 center;
 	float: left;
 }
+h1 a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
 .head-ul{
 	height: 88px;
 	margin-left: 400px;
@@ -92,9 +97,9 @@ h1{
 .content-top>p:first-child{
 	color: #19b1e8;
 }
-.content-top>p:hover{
+/*.content-top>p:hover{
 	color: #19b1e8;
-}
+}*/
 
 .content-main{
 	width: 1120px;
