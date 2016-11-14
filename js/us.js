@@ -40,10 +40,10 @@ $(function(){
 //		var opts = {    
 //				 width : 250,     // 信息窗口宽度    
 //				 height: 100,     // 信息窗口高度    
-//				 title : "Hello" // 信息窗口标题  
+//				 title : "贵州泛联科技有限公司" // 信息窗口标题  
 //				
 //			}    
-//			var infoWindow = new BMap.InfoWindow("World", opts,"red");// 创建信息窗口对象
+//			var infoWindow = new BMap.InfoWindow("World", opts);// 创建信息窗口对象
 //			map.openInfoWindow(infoWindow, map.getCenter()); 
 //			// 打开信息窗口
 			    	
@@ -72,6 +72,37 @@ $(function(){
     });
     
     
+    //贵州泛联地址地图
+    var map1 = new BMap.Map("mapLeft");
+    var point1 = new BMap.Point(106.651187,26.624632);
+    map1.centerAndZoom(point1, 16);
+    map1.enableScrollWheelZoom();
+    map1.addControl(new BMap.NavigationControl());    
+	map1.addControl(new BMap.ScaleControl());    
+	map1.addControl(new BMap.OverviewMapControl());    
+	map1.addControl(new BMap.MapTypeControl()); 
+	map1.setCurrentCity("北京");
+	var marker1 = new BMap.Marker(point1);        // 创建标注    
+	map1.addOverlay(marker1);
+	var opts1 = {    
+				 width : 250,     // 信息窗口宽度    
+				 height: 100,     // 信息窗口高度    
+				 title : "贵州泛联科技有限公司" // 信息窗口标题  
+				
+			}    
+			var infoWindow1 = new BMap.InfoWindow("World", opts1);// 创建信息窗口对象
+			map1.openInfoWindow(infoWindow1, map1.getCenter()); 
 	
-	
+	//北京泛联地址地图
+	var map2 = new BMap.Map("mapRight");
+    var point2 = new BMap.Point(116.317672,40.0432);
+    map2.centerAndZoom(point2, 16);
+    map2.enableScrollWheelZoom();
+    map2.addControl(new BMap.NavigationControl());    
+	map2.addControl(new BMap.ScaleControl());    
+	map2.addControl(new BMap.OverviewMapControl());    
+	map2.addControl(new BMap.MapTypeControl()); 
+	map2.setCurrentCity("北京");
+	var marker2 = new BMap.Marker(point2);        // 创建标注    
+	map2.addOverlay(marker2);
 });

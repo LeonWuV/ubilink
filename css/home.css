@@ -193,12 +193,18 @@ h1 a{
 	height: 600px;
 	width: 1120px;
 	margin: 82px auto 80px;
+	overflow: hidden;
 }
 .content-img{
 	float: left;
 	width: 560px;
-	height: 366px;
+	height: 370px;
 	background: cover;
+	overflow: hidden;
+}
+.content-img>img{
+	width: 560px;
+	height: 370px;
 }
 .content-font{
 	float: left;
@@ -222,6 +228,10 @@ h1 a{
 	overflow: hidden;
 	/*white-space: nowrap;*/
 	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;				
+	-webkit-box-orient: vertical;
+	
 }
 .content-more{
 	background: #19b1e8;
@@ -238,6 +248,77 @@ h1 a{
 	display: block;
 	height: 32px;
 	width: 103px;
+}
+.content-swiper-out{
+	height: 245px;
+	width: 100%;
+	overflow: hidden;
+	clear: both;
+	position: relative;
+}
+.content-swiper{
+	height: 245px;
+	width: 125%;
+	/*background: red;*/	
+}
+.swiper-same{
+	height: 100%;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+
+}
+.swiper-font1{
+	background: url(../img/hometp.png) no-repeat center -1px;
+}
+.swiper-font2{
+	background: url(../img/home1.png) no-repeat center -1px;
+}
+.swiper-font3{
+	background: url(../img/hometp.png) no-repeat center -1px;
+}
+.swiper-font4{
+	background: url(../img/home1.png) no-repeat center -1px;
+}
+.swiper-font5{
+	background: url(../img/hometp.png) no-repeat center -1px;
+}
+.swiper-p{
+	display: none;
+}
+.swiper-title{
+	width: 100%;
+	text-align: center;
+	line-height: 240px;
+	color: white;
+	font-size: 18px;
+	/*background: red;*/
+}
+.swiper-left{
+	display: block;
+	position: absolute;
+	height: 48px;
+	width: 30px;
+	top: 95px;
+	left: 0;
+	background: url(../img/ico9.png) no-repeat -10px center;
+	cursor: pointer;
+}
+.swiper-right{
+	display: block;
+	position: absolute;
+	height: 48px;
+	width: 30px;
+	top: 95px;
+	right: 0;
+	background: url(../img/ico8.png) no-repeat -7px center;
+	cursor: pointer;
+}
+.swiper-left:hover,.swiper-right:hover{
+	background-color: #000000;
+}
+.swiper-none{
+	height: 0;
 }
 .lastimg{
 	background: url(../img/bbg.png) no-repeat left top;

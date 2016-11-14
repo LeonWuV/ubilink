@@ -93,7 +93,46 @@ $(function(){
 //  		$(this).find("p").text("我变了").css("color","white");
     	},function(){
     		$(this).find("img").attr("src","img/ico6.png");
-    	})
+    	});
     
+    
+    //新闻列表的轮播图
+    	(function(){
+    		var n = 0;
+    		//点击那个让那个的内容替换上面的内容
+    		$(".swiper-same").click(function(){
+    			$(".content-title").text($(this).find(".swiper-title").text());
+    			$(".content-p").text($(this).find(".swiper-p").text());
+//  			console.log($(this).css("backgroundImage"));
+    			$(".content-img>img").attr("src",$(this).find(".swiper-none").attr("src"));
+    			//点击那个给那个添加一个蒙版
+    			$(".swiper-title").css("background","none");
+    			$(this).find(".swiper-title").css("background","rgba(188,99,12,.3)");
+    		});
+    		
+    		//左右按钮滑动
+    		$(".swiper-left").click(function(){
+    			n++;
+    			if(n >= 0){
+    				n = 0;
+    			}
+    			$(".content-swiper").animate({
+    				"margin-left":280*n
+    			});
+    			
+    		});
+    		$(".swiper-right").click(function(){
+    			n--;
+    			if(n <= -1){
+    				n = -1;
+    			}
+    			$(".content-swiper").animate({
+    				"margin-left":280*n
+    			});   			
+    		});
+    		
+    		
+    		
+    	}());
   
 });
