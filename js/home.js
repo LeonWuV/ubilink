@@ -65,8 +65,7 @@ $(function(){
 //			// 打开信息窗口
 			    	
 	}
-    
-    
+        
     //点击按钮，地图显示
     $(".clickmap1").click(function(){
     	$(".coverWrap").show();
@@ -88,6 +87,13 @@ $(function(){
     	$("body").css("overflow","auto");
     });
     
+    //img-third部分的hover事件
+    	$(".img-third-listin").hover(function(){
+    		$(this).find("img").attr("src","img/ico7.png");
+//  		$(this).find("p").text("我变了").css("color","white");
+    	},function(){
+    		$(this).find("img").attr("src","img/ico6.png");
+    	})
     
   
 });

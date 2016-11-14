@@ -18,6 +18,7 @@ h1{
 	font-size: 0;
 	background: url(../img/logo.png) no-repeat 0 center;
 	float: left;
+	background-size: 100%;
 }
 h1 a{
 	display: block;
@@ -242,7 +243,47 @@ hr{
 	cursor: pointer;
 }
 
+/*---------遮布、弹出地图---------------*/
+.coverWrap{
+	width: 100%;
+	height: 100%;
+	background: rgba(90,90,90,.6);
+	position:  fixed;
+	top: 0;
+	z-index: 4;
+	display: none;
+}
+.Map{
+	height: 500px;
+	width: 1000px;
+	margin:30px auto 0;
+	border-radius: 10px 10px 0 0;
+}
+.mapFoot{
+	height: 45px;
+	width: 1000px;
+	margin: 0 auto;
+	background: white;
+	border-radius: 0 0 10px 10px;
+	padding: 0.1px;
+}
+.closeCover{
+	height: 30px;
+	width: 50px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	border: 1px solid blue;
+	border-radius: 8px;
+	margin: 7px auto;
+	color: fuchsia;
+	font-size: 14px;
+}
 
+.closeCover:hover{
+	background: #C0C0C0;
+	color: mediumvioletred;
+}
 
 
 
