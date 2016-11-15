@@ -84,14 +84,17 @@ $(function(){
 	map1.setCurrentCity("北京");
 	var marker1 = new BMap.Marker(point1);        // 创建标注    
 	map1.addOverlay(marker1);
-	var opts1 = {    
-				 width : 250,     // 信息窗口宽度    
-				 height: 100,     // 信息窗口高度    
-				 title : "贵州泛联科技有限公司" // 信息窗口标题  
-				
-			}    
-			var infoWindow1 = new BMap.InfoWindow("World", opts1);// 创建信息窗口对象
-			map1.openInfoWindow(infoWindow1, map1.getCenter()); 
+	
+	var content1 = "<div style='height:80px;width:200px;'>"+
+	"<h2 style='color:red;font-size:15px;'>贵州泛联科技有限公司</h2>"+
+	"<p style='font-size:11px;'>地址：贵阳市高新区长岭南路31号国家数字内容产业园大楼4楼B区</p>"+
+	"<p style='font-size:11px;'>电 话(C)：+8610-60608488</p>"+
+	"</div>"
+	
+  	
+	var infoWindow1 = new BMap.InfoWindow(content1);// 创建信息窗口对象
+	marker1.openInfoWindow(infoWindow1);
+	 infoWindow1.redraw();
 	
 	//北京泛联地址地图
 	var map2 = new BMap.Map("mapRight");
@@ -105,4 +108,15 @@ $(function(){
 	map2.setCurrentCity("北京");
 	var marker2 = new BMap.Marker(point2);        // 创建标注    
 	map2.addOverlay(marker2);
+	
+	var content2 = "<div style='height:80px;width:240px;'>"+
+	"<h2 style='color:red;font-size:15px;'>北京泛维智联信息技术有限公司</h2>"+
+	"<p style='font-size:11px;margin:5px 0'>地址：北京市海淀区上地信息路26号7层718室</p>"+
+	"<p style='font-size:11px;'>电 话(C)：+8610-60608488</p>"+
+	"</div>"
+	
+  	
+	var infoWindow2 = new BMap.InfoWindow(content2);// 创建信息窗口对象
+	marker2.openInfoWindow(infoWindow2);
+	 infoWindow2.redraw();
 });

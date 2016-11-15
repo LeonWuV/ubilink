@@ -83,6 +83,13 @@ h1 a{
 	line-height: 36px;
 	display: none;
 }
+.swiper-pagination-bullet{
+	border: 1.5px #ccc solid;
+	/*box-shadow: 2px 0 2px 2px  darkkhaki,0 2px 2px 2px darkkhaki;*/
+}
+.swiper-button-prev:hover,.swiper-button-next:hover{
+	background-color: rgba(90,90,90,.4);
+}
 .chain{
 	margin-left: 13px;
 	cursor: pointer;
