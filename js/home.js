@@ -4,6 +4,7 @@ $(function(){
 		//有坑，不能用document.body.clientWidth  document.body.clientHeight 
 		var  innerHeight1 = document.documentElement.clientHeight;
 		var innerWidth1 = document.documentElement.clientWidth;
+		console.log(innerHeight1,innerWidth1)
 		//让轮播图大小适应不同的浏览器第一屏
 		$(".header").css({"height":innerHeight1,"width":innerWidth1});
 		$(".banner").css({"height":innerHeight1,"width":innerWidth1});
@@ -39,6 +40,32 @@ $(function(){
     		"margin-left":0
     	},600);   	
     });
+    
+    //滑动的新闻中心
+    var newTime1 = -1;
+    setInterval(function(){
+    	newTime1--;
+    	if(newTime1 <= -5){
+    		$(".newslide-content").css("margin-top",0)
+    		newTime1 = -1;
+    	}
+    	$(".newslide-content").animate({"margin-top":newTime1*85},1000);
+    },3000);
+    
+    	//list鼠标事件，图标上移
+	$(".productservice-float").on("mouseover",function(){
+	   	   $(this).find('.movePart').stop().animate({
+	   	   	   'top':43
+	   	   },500);
+	   	   $(this).find(".productservice-none").stop().fadeIn(500);
+   		});
+   //鼠标离开时  回到初始位置
+    $(".productservice-float").on("mouseout",function(){
+   	   $(this).find('.movePart').stop().animate({
+   	   	   'top':108
+   	   },500);
+   	   $(this).find(".productservice-none").stop().fadeOut(500);
+   });
     //地图API封装函数
     function showMap(long,lat){
     	var map = new BMap.Map("myMap");
@@ -87,52 +114,5 @@ $(function(){
     	$("body").css("overflow","auto");
     });
     
-    //img-third部分的hover事件
-    	$(".img-third-listin").hover(function(){
-    		$(this).find("img").attr("src","img/ico7.png");
-//  		$(this).find("p").text("我变了").css("color","white");
-    	},function(){
-    		$(this).find("img").attr("src","img/ico6.png");
-    	});
-    
-    
-    //新闻列表的轮播图
-    	(function(){
-    		var n = 0;
-    		//点击那个让那个的内容替换上面的内容
-    		$(".swiper-same").click(function(){
-    			$(".content-title").text($(this).find(".swiper-title").text());
-    			$(".content-p").text($(this).find(".swiper-p").text());
-//  			console.log($(this).css("backgroundImage"));
-    			$(".content-img>img").attr("src",$(this).find(".swiper-none").attr("src"));
-    			//点击那个给那个添加一个蒙版
-    			$(".swiper-title").css("background","none");
-    			$(this).find(".swiper-title").css("background","rgba(188,99,12,.3)");
-    		});
-    		
-    		//左右按钮滑动
-    		$(".swiper-left").click(function(){
-    			n++;
-    			if(n >= 0){
-    				n = 0;
-    			}
-    			$(".content-swiper").animate({
-    				"margin-left":280*n
-    			});
-    			
-    		});
-    		$(".swiper-right").click(function(){
-    			n--;
-    			if(n <= -1){
-    				n = -1;
-    			}
-    			$(".content-swiper").animate({
-    				"margin-left":280*n
-    			});   			
-    		});
-    		
-    		
-    		
-    	}());
   
 });

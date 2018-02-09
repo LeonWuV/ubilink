@@ -1,31 +1,84 @@
 $(function(){
-	//全局变量，保存点击的那个p
-	var n = 0;
-	//下划线跟着鼠标跑
-	$(".content-top>p").on("mouseover",function(){
-		$(".content-span").stop().animate({
-			"left":$(this).index()*150
-		});							
-	});
-	//鼠标离开复原
-	$(".content-top>p").on("mouseout",function(){
-	    	$(".content-span").stop().animate({
-	    		"left":n*150
-    		});
-	});
-	//tab切换
-	$(".content-top>p").click(function(){
-		n = $(this).index();
-//		console.log(n)
-		$(".content-main>div").hide();
-		$(".content-main>div").eq($(this).index()).show();
-		//下划线变换
-		$(".content-span").css({"left":n*150});
-		//变颜色
-		$(".content-top>p").css({"color":"#333333"});
-		$(".content-top>p").eq(n).css({"color":"#19b1e8"});
+
+	 //导航栏下划线移动
+    	//鼠标放上去下划线跑动
+    $(".nav-ul li").on("mouseover",function(){
+    	$(".underline").stop().animate({
+    		"margin-left":$(this).index()*132
+    	},300);   	
+    });
+    	//如果不点击，鼠标离开下划线回到第一个初始位置
+     $(".nav-ul li").on("mouseout",function(){
+    	$(".underline").stop().animate({
+    		"margin-left":0
+    	},600);   	
+    });
+	
+	//点击左边的title隐藏显示,背景图标切换
+	(function(){
+		//全局变量，做中间判断的中介
+		var  sign1 = true;
+		var  sign2 = true;
+		var  sign3 = true;
+		$(".content-left1-title").click(function(){
+			$(".content-left1-list").slideToggle();
+			if(sign1){
+				$(this).css("background","url(../img/lefticon1.png) no-repeat 18px center");
+				sign1 = false;
+			}else{
+				$(this).css("background","url(../img/lefticon2.png) no-repeat 18px center");
+				sign1 = true;
+			}
+		});
+	
+		$(".content-left2-title").click(function(){
+			$(".content-left2-list").slideToggle();
+			if(sign2){
+				$(this).css("background","url(../img/lefticon2.png) no-repeat 18px center,url(../img/productleftbg.png) no-repeat center top");
+				sign2 = false;
+			}else{
+				$(this).css("background","url(../img/lefticon1.png) no-repeat 18px center,url(../img/productleftbg.png) no-repeat center top");
+				sign2 = true;
+			}
+		});
 		
-	})
+		$(".content-left3-title").click(function(){
+			$(".content-left3-list").slideToggle();
+			if(sign3){
+				$(this).css("background","url(../img/lefticon2.png) no-repeat 18px center,url(../img/productleftbg.png) no-repeat center top");
+				sign3 = false;
+			}else{
+				$(this).css("background","url(../img/lefticon1.png) no-repeat 18px center,url(../img/productleftbg.png) no-repeat center top");
+				sign3 = true;
+			}
+		});
+	})();
+	
+	//切换内容
+	console.log($(".content-leftli"));
+	$(".content-leftli").click(function(){
+		//点击谁   谁变色
+		var nnn = 0;
+		$(".content-leftli").css("color","#333333")
+		$(this).css("color","#d92443");
+		//点击谁  谁对应的下标对应到右边列表的下标显示
+		$(".content-right-list").hide();
+		//判断在哪一个ul面
+		if($(this).parent().prev().text() == "软件"){
+			nnn = $(this).index()/1 + 7;
+		}
+		else if($(this).parent().prev().text() == "云平台"){
+			nnn = $(this).index()/1 + 8;
+		}else{
+			nnn =  $(this).index();
+		}
+		
+		$(".content-right-list").eq(nnn).show();
+	});
+	
+	
+	
+	
 	
 	 //地图API封装函数
     function showMap(long,lat){
@@ -76,5 +129,5 @@ $(function(){
     	$("body").css("overflow","auto");
     });
 	
-	
+//	console.log($(".content-left").find("li").length);
 });

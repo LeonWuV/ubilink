@@ -1,23 +1,32 @@
-.head{
-	height: 88px;
+html,body{
 	width: 100%;
-	background:#2a2a2a;
 }
-.head-in{
+/*---------头部导航栏------------*/
+.header{
+	/*height: 600px;*/
+	width: 100%;
+}
+.nav{
+	height: 80px;
+	width: 100%;
+	top: 0;
 	margin: 0 auto;
+	/*background:red ;*/
+}
+.nav-out{
 	width: 1120px;
 	height: 100%;
+	margin: 0 auto;
+	/*background: blue;*/
 	padding: 0.1px;
-	
 }
 h1{
-	margin-top: 10px;
-	margin-left: 180px;
-	height: 68px;
-	width: 120px;
-	font-size: 0;
-	background: url(../img/logo.png) no-repeat 0 center;
 	float: left;
+	margin-left: 173px;
+	height: 80px;
+	width: 100px;
+	font-size: 0;
+	background: url(../img/logo1.png) no-repeat 0 center;
 	background-size: 100%;
 }
 h1 a{
@@ -25,55 +34,88 @@ h1 a{
 	width: 100%;
 	height: 100%;
 }
-.head-ul{
-	height: 88px;
-	margin-left: 400px;
-}
-.head-ul li{
+.nav-ul{
 	float: left;
-	margin-right: 70px;
-	line-height: 42px;
-	position: relative;
-}
+	margin-top: 20px;
+	margin-left: 70px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0.1px;
 
-.head-ul a{
-	font-size: 14px;
-	display: block;
-	color: #ffffff;
-	width: 70px;
-	height: 42px;
-	margin-top: 23px;
-	text-align: center;
-	/*position: absolute;*/
-	z-index: 3;
 }
-.head-div{
+.nav-ul li{
+		float: left;
+		padding-left: 38px;
+		font-size: 14px;
+		width: 132px;
+}
+.nav-ul li a{
+	color: #333333;
+}
+.nav-ul li:nth-child(3) a{
+	color: #d92443;
+}
+.nav-ul li a:hover{
+	color: #d92443;
+}
+.underline{
+	display: block;
+	width: 56px;
+	height: 2px;
+	background: #d92443;
+	margin-left: 264px;
+}
+.headimg{
 	width: 100%;
-	background: rgba(0,0,0,0.4);
-	display: none;
-	position: absolute;
-	z-index: 2;
-}
-.head-div a{
-	height: 30px;
-	line-height: 30px;
-	margin-top: -5px;
-}
-.head-ul>li:hover .head-div{
-	display: block;
-}
-.head-ul>li:hover >a{
-	background: rgba(0,0,0,0.4);
+	height:384px;
+	background: url(../img/solvetopbg.jpg) no-repeat center center;
+	background-size: 100% 100%;
 }
 /*--------内容部分----------*/
-.content{
-	width: 1120px;	
-	margin: 0 auto;	
-	border: 1px solid;
-	height: 400px;
+/*字体描述部分*/
+.description{width:1100px;margin:5px auto 0;}
+.description p{line-height: 40px;text-indent: 2rem;letter-spacing: 1px;font-size: 17px;}
+/*列表部分*/
+.list{margin-bottom: 108px;height:780px;margin: 0 auto 108px;width:1100px;}
+.list ul{margin-right: -12px;}
+.list_li{height: 380px;width:266px;float: left;margin:12px 12px 0 0;position: relative;}
+.list_li div{height:150px;position: absolute;top:115px;width:100%;text-align: center;}
+.title{color:white;margin-top: 20px;font-size: 17px;}
+.details{color:white;margin-top:240px !important;display: none; text-align: center;width: 92px;height: 28px;line-height: 28px;
+		border: 1.5px white solid;
+		border-radius: 3px;
+		margin: 0 auto;
+		font-size: 15px;
 }
+.details a{
+	display: block;
+	color:white;
+}
+/*.details:hover{
+	background: #007AFF;
+}*/
+.list_1{background: url(../img/solvelist1.jpg) left center no-repeat;}
+.list_2{background: url(../img/solvelist2.jpg) left center no-repeat;}
+.list_3{background: url(../img/solvelist3.jpg) left center no-repeat;}
+.list_4{background: url(../img/solvelist4.jpg) left center no-repeat;}
+.list_5{background: url(../img/solvelist5.jpg) left center no-repeat;}
+.list_6{background: url(../img/solvelist6.jpg) left center no-repeat;}
+.list_7{background: url(../img/solvelist7.jpg) left center no-repeat;}
+.list_8{background: url(../img/solvelist8.jpg) left center no-repeat;}
+.list_1:hover{background: url(../img/solvelistbg1.jpg);}
+.list_2:hover{background: url(../img/solvelistbg2.jpg);}
+.list_3:hover{background: url(../img/solvelistbg3.jpg);}
+.list_4:hover{background: url(../img/solvelistbg4.jpg);}
+.list_5:hover{background: url(../img/solvelistbg5.jpg);}
+.list_6:hover{background: url(../img/solvelistbg6.jpg);}
+.list_7:hover{background: url(../img/solvelistbg7.png);}
+.list_8:hover{background: url(../img/solvelistbg8.jpg);}
 
-
+hr{
+	background-color: #f7f7f7;
+	border: none;
+	height: 1.5px;
+}
 /*--------合作伙伴----------*/
 .partner{
 	width: 1120px;
@@ -159,7 +201,7 @@ hr{
 .footer-bot{
 	height: 228px;
 	width: 1120px;
-	margin auto 0;
+	margin: 0 auto; 
 	color: #d8d8d8;
 	font-size: 14px;
 	padding-top: 83px;	

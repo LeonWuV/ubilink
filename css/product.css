@@ -1,23 +1,23 @@
-.head{
-	height: 88px;
+/*---------导航部分-----------*/
+nav{
+	height: 80px;
 	width: 100%;
-	background:#2a2a2a;
-}
-.head-in{
 	margin: 0 auto;
+	overflow: hidden;
+}
+.nav-out{
 	width: 1120px;
 	height: 100%;
+	margin: 0 auto;
 	padding: 0.1px;
-	
 }
 h1{
-	margin-top: 10px;
-	margin-left: 180px;
-	height: 68px;
-	width: 120px;
-	font-size: 0;
-	background: url(../img/logo.png) no-repeat 0 center;
 	float: left;
+	margin-left: 173px;
+	height: 80px;
+	width: 100px;
+	font-size: 0;
+	background: url(../img/logo1.png) no-repeat 0 center;
 	background-size: 100%;
 }
 h1 a{
@@ -25,100 +25,218 @@ h1 a{
 	width: 100%;
 	height: 100%;
 }
-.head-ul{
-	height: 88px;
-	margin-left: 400px;
-}
-.head-ul li{
+.nav-ul{
 	float: left;
-	margin-right: 70px;
-	line-height: 42px;
-	position: relative;
-}
+	margin-top: 20px;
+	margin-left: 70px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0.1px;
 
-.head-ul a{
+}
+.nav-ul li{
+	float: left;
+	padding-left: 38px;
 	font-size: 14px;
-	display: block;
-	color: #ffffff;
-	width: 70px;
-	height: 42px;
-	margin-top: 23px;
-	text-align: center;
-	/*position: absolute;*/
-	z-index: 3;
+	width: 132px;
 }
-.head-div{
-	width: 100%;
-	background: rgba(0,0,0,0.4);
+.nav-ul li a{
+	color: black;
+}
+.nav-ul li:first-child a{
+	color: #d92443;
+}
+.nav-ul li>a:hover{
+	color: #d92443;
+}
+.underline{
+	display: block;
+	width: 56px;
+	height: 2px;
+	background: #d92443;
+	margin-left: 0;
+}
+.last-li{
+	float: left;
+	height: 36px;
+	width: 118px;
+	background: rgba(99,99,99,.4) url(../img/shu.png) no-repeat 50px center;
+	margin-top: 20px;
+	margin-left: 60px;
+	border-radius: 4px;
+	line-height: 36px;
 	display: none;
-	position: absolute;
-	z-index: 2;
 }
-.head-div a{
-	height: 30px;
-	line-height: 30px;
-	margin-top: -5px;
-}
-.head-ul>li:hover .head-div{
-	display: block;
-}
-.head-ul>li:hover >a{
-	background: rgba(0,0,0,0.4);
+/*---------banner------------------*/
+.banner{
+	width: 100%;
+	height: 384px;
+	background: url(../img/productbanner.jpg) left center no-repeat;
+	background-size: 100% 100%;
+	margin-top: 80px;
 }
 /*--------内容部分----------*/
-.content{
-	width: 1120px;	
-	margin: 0 auto;	
-
-}
-.content-top{
-	margin:20px auto 50px;
-	position: relative;
-	height: 44px;
-	line-height: 42px;
-	border-bottom: 1px solid #ccc;
-	
-}
-.content-top>p{
-	float: left;
-	width: 150px;
-	height: 44px;
-	text-align: center;
-	font-size: 22px;
-	color: #333333;
-	cursor: pointer;
-} 
-.content-span{
-	height: 2px;
-	width: 150px;
-	display: block;
-	background:#19b1e8 ;
-	position: absolute;
-}
-.content-top>p:first-child{
-	color: #19b1e8;
-}
-/*.content-top>p:hover{
-	color: #19b1e8;
-}*/
-
-.content-main{
-	width: 1120px;
-	height: 300px;
-	border: 1px solid;
-	position: relative;
-}
-.content-main>div{
+.content-box{
+	height: 1055px;
 	width: 100%;
-	position: absolute;
+	background: #f7f7f7;
+	padding: 0.1px;
+}
+.content-box1{
+	height: 1020px;
+	width: 1100px;
+	margin: 15px auto;
 	background: white;
 }
-.content-main>div:first-child{
-	z-index: 2;
+/*------------左边-----------*/
+.content-left{
+	width: 190px;
+	height: 100%;
+	float: left;
+	border-right: 1.5px solid #e0e0e0;
+}
+.content-left1-title,.content-left2-title,.content-left3-title{
+	line-height:65px;
+	text-indent: 38px;
+	font-size: 24px;
+	cursor: pointer;	
+}
+.content-left1-title{
+	background: url(../img/lefticon2.png) no-repeat 18px center;
+}
+.content-left2-title,.content-left3-title{
+	background: url(../img/lefticon1.png) no-repeat 18px center,url(../img/productleftbg.png) no-repeat center top;	
+}
+.content-left1-list{
+	width: 100%;
+	line-height: 18px;
+	font-size: 18px;
+			
+}
+ .content-left2-list,.content-left3-list{
+ 	display: none;
+ 	width: 100%;
+	line-height: 18px;
+	font-size: 18px;
+ } 
+.content-left li{
+	margin-bottom: 25px;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+.content-left li:hover{
+	color: #d92443 !important;
+}
+/*-----------右边-------*/
+.content-right{
+	float: left;
+	padding-left: 15px;
+	width: 910px;	
+	overflow: hidden;
+}
+.content-right-list{
+	width: 100%;
+	height: 1020px;
+	background: url(../img/productlistbgs.png) no-repeat 1px 56px;
+	display: none;
+}
+.content-right-list2{background: none;}
+.content-right-listtitle{
+	line-height: 56px;
+	font-size: 18px;
+	color: #d92443;
+	text-indent: 10px;
+}
+.content-leftli1{
+	color: #d92443;
+}
+.content-right-listbot{
+	height: 542px;
+	width: 863px;	
+}
+.content-right-listimg{
+	float: left;
+	margin: 30px 10px 0 20px;
+	
+}
+/*-------边框比较大的块----------*/
+.content-right-listimg1{
+	float: left;
+	margin: 100px 10px 0 20px;
+}
+.content-right-listbotright-bot1{
+	width: 385px;
+	height: 670px;
+	position: relative;
+	
+}
+.content-right-list1{
+	width: 100%;
+	height: 1020px;
+	background: url(../img/productlistbgl.png) no-repeat 1px 56px;
+	display: none;
+}
+/*-----------------------*/
+.content-right-listbotright{
+	float: right;
+	width: 377px;
+	margin-top: 10px;
+	margin-right: 9px;
+}
+.content-right-listbotright-top{
+	line-height: 84px;
+	width: 100%;
+	border-bottom: 1.5px solid #e9e9e9;
+	text-align: center;
+	color: #333333;
+	font-size: 25px;
+}
+.content-right-listbotright-bot{
+	width: 385px;
+	height: 450px;
+	position: relative;	
 }
 
+.content-p-content{
+	width: 320px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);    /* for Chrome || Safari */
+    -moz-transform: translate(-50%, -50%);       /* for Firefox */           
+    -ms-transform: translate(-50%, -50%);        /* for IE */         
+    -o-transform: translate(-50%, -50%); 
+}
+.content-right-listbotright-botp{
+	line-height: 30px;
+	font-size: 14px;
+}
+.content-isnone{
+	display: block;
+}
+/*----------软件产品显示区域--------*/
+.allProduct{
+	width:100%;
+	
+}
+.allProduct li{
+	float: left;
+	margin:0 13px 35px 0;
+}
+/*--------云平台区域-------*/
+.scheme{
+	width: 100%;
+}
+.scheme img{
+	margin-left: 16px;
+	border:1px solid #ecebeb;
+	padding: 8px;
+}
 /*--------合作伙伴----------*/
 .partner{
+	clear: both;
 	width: 1120px;
 	height: 414px;
 	margin: 0 auto;
@@ -126,7 +244,7 @@ h1 a{
 .partner-top{
 	width: 670px;
 	height: 204px;
-	padding-top: 115px;
+	padding-top: 70px;
 	margin: 0 auto;
 	
 }
@@ -202,7 +320,7 @@ hr{
 .footer-bot{
 	height: 228px;
 	width: 1120px;
-	margin auto 0;
+	margin: 0 auto; 
 	color: #d8d8d8;
 	font-size: 14px;
 	padding-top: 83px;	

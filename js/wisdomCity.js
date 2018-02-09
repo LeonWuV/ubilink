@@ -1,6 +1,34 @@
 $(function(){
-
+	 //导航栏下划线移动
+    	//鼠标放上去下划线跑动
+    $(".nav-ul li").on("mouseover",function(){
+    	$(".underline").stop().animate({
+    		"margin-left":$(this).index()*132
+    	},300);   	
+    });
+    	//如果不点击，鼠标离开下划线回到第初始位置
+     $(".nav-ul li").on("mouseout",function(){
+    	$(".underline").stop().animate({
+    		"margin-left":264
+    	},600);   	
+    });
+    //顶部的banner的高度
+//	$(".headimg").css("height",document.documentElement.clientHeight-80);
 	
+	//list鼠标事件，图标上移
+	   $(".list_li").on("mouseover",function(){
+	   	   $(this).find('div').stop().animate({
+	   	   	   'top':75
+	   	   },300);
+	   	   $(this).find(".details").stop().fadeIn(600);
+   		});
+   //鼠标离开时  回到初始位置
+    $(".list_li").on("mouseout",function(){
+   	   $(this).find('div').stop().animate({
+   	   	   'top':115
+   	   },300);
+   	   $(this).find(".details").stop().fadeOut(600);
+   });
 	 //地图API封装函数
     function showMap(long,lat){
     	var map = new BMap.Map("myMap");
